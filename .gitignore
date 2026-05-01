@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Generated dataset files (run setup_dataset.py to regenerate)
+backend/data/fingerprints.csv
+backend/data/images/
+
+# Keep model weights in git (only 9MB — needed for real CV)
+# backend/data/*.pt  ← intentionally NOT excluded
+
+# OS
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable

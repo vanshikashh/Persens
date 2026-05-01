@@ -1,0 +1,19 @@
+.zone {
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--r-lg);
+  padding: 28px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--sand);
+  user-select: none;
+}
+.zone:hover { border-color: var(--accent); background: var(--accent-light); }
+.dragging   { border-color: var(--accent); background: var(--accent-light); }
+.accepted   { border-color: var(--teal); background: var(--teal-light); border-style: solid; }
+
+.uploadIcon { font-size: 22px; margin-bottom: 8px; color: var(--mist); }
+.checkIcon  { font-size: 20px; color: var(--teal); margin-bottom: 6px; }
+.label      { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+.fileName   { font-size: 13px; font-weight: 500; color: var(--teal); margin-bottom: 3px; }
+.sub        { font-size: 11px; color: var(--mist); }
