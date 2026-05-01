@@ -13,6 +13,8 @@ RUN pip install --no-cache-dir git+https://github.com/openai/CLIP.git
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN python -c "import clip; clip.load('ViT-B/32', device='cpu')"
+
 COPY . .
 
 RUN mkdir -p data
