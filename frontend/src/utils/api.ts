@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api' })
+const BASE = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
+const api = axios.create({ baseURL: `${BASE}/api` })
 
-// Image URL helper — resolves to backend static image
 export function materialImageUrl(filename: string | null | undefined, type: 'nonspec' | 'spec' = 'nonspec'): string | null {
   if (!filename) return null
   const folder = type === 'nonspec' ? 'nonspec' : 'spec'
-  return `http://localhost:8000/images/${folder}/${filename}`
+  return `${BASE}/images/${folder}/${filename}`
 }
 
 // ── Fingerprint ───────────────────────────────────────────────────────────────
