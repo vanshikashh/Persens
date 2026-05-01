@@ -37,7 +37,7 @@ export default function RadarChart({
 
   return (
     <ResponsiveContainer width="100%" height={size}>
-      <ReRadar cx="50%" cy="50%" outerRadius="70%">
+      <ReRadar cx="50%" cy="50%" outerRadius="70%" data={data}>
         <PolarGrid stroke="rgba(26,22,20,0.08)" strokeWidth={0.5} />
         {showLabels && (
           <PolarAngleAxis
@@ -57,7 +57,6 @@ export default function RadarChart({
           formatter={(val: number, name: string) => [val.toFixed(3), name]}
         />
         <Radar
-          data={data}
           dataKey="value"
           name="Fingerprint"
           stroke={color}
@@ -66,7 +65,6 @@ export default function RadarChart({
         />
         {compareValues && (
           <Radar
-            data={data}
             dataKey="compare"
             name="Compare"
             stroke={compareColor}
