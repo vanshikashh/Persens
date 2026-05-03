@@ -138,23 +138,5 @@ and is marked with `confidence < 0.9` in API responses.
 | Queries   | TanStack Query                          |
 | Deploy    | Docker Compose · Nginx                  |
 
----
 
-## Resume bullets (verified numbers)
-
-```
-• Built LensID, extending Filip et al. (arXiv:2410.13615) with 4 novel capabilities:
-  attribute-directed perceptual search, counterfeit detection, perceptual composition
-  prediction, and per-attribute Grad-CAM; matched published Recall@5=3.2/5 baseline
-  on 347-material dataset with attribute fidelity MAE=0.12 on edited retrievals.
-
-• Designed PerceptualComposer (32→64→32→16 MLP with learned attention weighting);
-  outperformed naive linear blending by 31% MSE reduction on 1,000 held-out synthetic
-  composition pairs, enabling perceptual-space design exploration without physical
-  prototyping.
-
-• Implemented per-attribute Grad-CAM for all 16 perceptual dimensions of the
-  CLIP-based fingerprinting model; built material authentication achieving ROC-AUC=0.89
-  using illumination-robust attribute cluster analysis; deployed as FastAPI + Qdrant
-  retrieval system with <200ms p95 latency.
 ```
